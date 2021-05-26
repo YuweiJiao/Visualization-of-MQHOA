@@ -55,7 +55,7 @@ while evo > 0:
     if change_flag == 0:
         meanPos = np.mean(optimalSolution, axis=1)
         badIndex = np.argmax(funcV)
-        std = np.std(optimalSolution, axis=1)
+       # std = np.std(optimalSolution, axis=1)
         optimalSolution[:, badIndex] = meanPos
         funcV[badIndex] = func.Schwefel(meanPos)
         evo = evo - 1
